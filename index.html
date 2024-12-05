@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skilled - Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">skilled</h1>
+        <button class="btn primary">Get Started</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-text" data-aos="fade-up">
+          <h1>Maximize skill, minimize budget</h1>
+          <p>
+            Our modern courses across a range of in-demand skills will give you the knowledge
+            you need to live the life you want.
+          </p>
+          <button class="btn secondary">Get Started</button>
+        </div>
+        <div class="hero-stats" data-aos="zoom-in">
+          <div class="stat">
+            <p>Course hours</p>
+            <h2>1,451</h2>
+          </div>
+          <div class="stat">
+            <p>Members</p>
+            <h2>29k</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="courses">
+      <div class="container">
+        <h2 data-aos="fade-right">Check out our most popular courses!</h2>
+        <div class="course-grid">
+          <div class="course-card" data-aos="fade-up">
+            <h3>Animation</h3>
+            <p>
+              Learn the latest animation techniques to create stunning motion design and
+              captivate your audience.
+            </p>
+            <button class="btn tertiary">Get Started</button>
+          </div>
+          <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Design</h3>
+            <p>
+              Create beautiful, usable interfaces to help shape the future of how the web looks.
+            </p>
+            <button class="btn tertiary">Get Started</button>
+          </div>
+          <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Photography</h3>
+            <p>
+              Explore critical fundamentals like lighting, composition, and focus to capture
+              exceptional photos.
+            </p>
+            <button class="btn tertiary">Get Started</button>
+          </div>
+          <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Crypto</h3>
+            <p>
+              All you need to know to get started investing in crypto. Go from beginner to
+              advanced with this 54-hour course.
+            </p>
+            <button class="btn tertiary">Get Started</button>
+          </div>
+          <div class="course-card" data-aos="fade-up" data-aos-delay="400">
+            <h3>Business</h3>
+            <p>
+              A step-by-step playbook to help you start, scale, and sustain your business
+              without outside investment.
+            </p>
+            <button class="btn tertiary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <h2 class="logo">skilled</h2>
+        <button class="btn secondary">Get Started</button>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // Initialize AOS (Animation on Scroll)
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          easing: "ease-in-out", // Easing function
+          offset: 200, // Offset for triggering animations
+        });
+      });
+    </script>
+  </body>
+</html>
