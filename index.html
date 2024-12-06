@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skilled - Landing Page</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/aos.css" />
   </head>
   <body>
     <header class="header">
@@ -81,6 +81,22 @@
             </p>
             <button class="btn tertiary">Get Started</button>
           </div>
+          <div class="course-card" data-aos="custom-translate" data-aos-delay="500">
+            <h3>Crypto</h3>
+            <p>
+              All you need to know to get started investing in crypto. Go from beginner to
+              advanced with this 54-hour course.
+            </p>
+            <button class="btn tertiary">Get Started</button>
+          </div>
+          <div class="course-card" data-aos="custom-stack" data-aos-delay="600">
+            <h3>Business</h3>
+            <p>
+              A step-by-step playbook to help you start, scale, and sustain your business
+              without outside investment.
+            </p>
+            <button class="btn tertiary">Get Started</button>
+          </div>
         </div>
       </div>
     </section>
@@ -92,16 +108,8 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      // Initialize AOS (Animation on Scroll)
-      document.addEventListener("DOMContentLoaded", () => {
-        AOS.init({
-          duration: 1000, // Animation duration in milliseconds
-          easing: "ease-in-out", // Easing function
-          offset: 200, // Offset for triggering animations
-        });
-      });
-    </script>
+    <script src="js/aos.js"></script>
+    <script type="module" src="js/aos-init.js"></script>
+    <script src="js/custom-stack-out.js"></script>
   </body>
 </html>

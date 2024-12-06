@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .btn {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn.primary {
+    background: #1a1a2e;
+    color: #fff;
+  }
+  
+  .btn.secondary {
+    background: #ff6584;
+    color: #fff;
+  }
+  
+  .btn.tertiary {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .stat h2 {
+    font-size: 28px;
+    color: #ff6584;
+  }
+  
+  /* Courses Section */
+  .courses {
+    padding: 50px 0;
+  }
+  
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .course-card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .course-card h3 {
+    margin: 10px 0;
+  }
+
+  /* Targeting the second row, third card (3rd child of .course-grid) */
+.course-grid .course-card:nth-child(6) {
+  border: 2px solid #ff6584; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+/* Targeting the third row, first card (7th child of .course-grid) */
+.course-grid .course-card:nth-child(7) {
+  border: 2px solid #1a1a2e; /* Different border color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+  
+
+/* Custom animation for pushing cards upward */
+@keyframes custom-translate {
+  0% {
+    transform: translateY(100px); /* Start from 100px below */
+    opacity: 0; /* Hidden initially */
+  }
+  100% {
+    transform: translateY(0); /* Move to its original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Override AOS animation for the second row */
+[data-aos="custom-translate"] {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+[data-aos="custom-translate"].aos-animate {
+  animation: custom-translate 1s ease-in-out forwards;
+}
+
+/* animation for card in third row (laptop devices) */
+@keyframes custom-stack {
+  0% {
+    transform: translateY(100px); /* Start slightly smaller */
+    z-index: 1; /* Behind other elements */
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(60px); /* Gradually return to normal size */
+    z-index: 2;
+    opacity: 1; /* Fully visible */
+  }
+  40% {
+    transform: translateY(20px); /* Gradually return to normal size */
+    z-index: 2;
+    opacity: 1; /* Fully visible */
+  }
+  60% {
+    transform: translateY(-20px); /* Gradually return to normal size */
+    z-index: 2;
+    opacity: 1; /* Fully visible */
+  }
+  80% {
+    transform: translateY(-60px); /* Start slightly smaller */
+    z-index: 1; /* Behind other elements */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px); /* Start slightly smaller */
+    z-index: 1; /* Behind other elements */
+    opacity: 1;
+  }
+
+}
+
+[data-aos="custom-stack"].aos-animate {
+  animation: custom-stack 2s cubic-bezier(0.5, 0, 1, 1) forwards; /* Smooth easing curve */
+}
+
+[data-aos="custom-stack"] {
+  opacity: 0;
+  transform: translateY(100px); /* Match initial animation state */
+  z-index: 1;
+  position: relative;
+}
+
+
+/* Keyframes for smooth disappearance with return to original position */
+@keyframes custom-stack-out {
+  0% {
+    transform: translateY(-100px); /* Final position from entry animation */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: translateY(0); /* Return to original position */
+    opacity: 1; /* Still visible */
+  }
+  100% {
+    transform: translateY(0); /* Stay at original position */
+    opacity: 0; /* Fully invisible */
+  }
+}
+
+/* Class for triggering the exit animation */
+.exit-animation {
+  animation: custom-stack-out 1.5s cubic-bezier(0.5, 0, 1, 1) forwards;
+}
+
+
+  /* Footer */
+  .footer {
+    background: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
