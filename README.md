@@ -8,4 +8,4 @@ AOS, waypoints CSS3 built-in scroll-timeline and etc
 
 ## Demo
 
-[custom animations demo](screen-capture.webm)
+[custom animations demo](screen-capture.mp4)
