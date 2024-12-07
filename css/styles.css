@@ -131,6 +131,17 @@ body {
 }
 
 /* animation for card in third row (laptop devices) */
+[data-aos="custom-stack"].aos-animate {
+  animation: custom-stack 2s cubic-bezier(0.5, 0, 1, 1) forwards; /* Smooth easing curve */
+}
+
+[data-aos="custom-stack"] {
+  opacity: 0;
+  transform: translateY(100px); /* Match initial animation state */
+  z-index: 1;
+  position: relative;
+}
+
 @keyframes custom-stack {
   0% {
     transform: translateY(100px); /* Start slightly smaller */
@@ -165,19 +176,11 @@ body {
 
 }
 
-[data-aos="custom-stack"].aos-animate {
-  animation: custom-stack 2s cubic-bezier(0.5, 0, 1, 1) forwards; /* Smooth easing curve */
-}
-
-[data-aos="custom-stack"] {
-  opacity: 0;
-  transform: translateY(100px); /* Match initial animation state */
-  z-index: 1;
-  position: relative;
-}
-
-
 /* Keyframes for smooth disappearance with return to original position */
+/* Class for triggering the exit animation */
+.exit-animation {
+  animation: custom-stack-out 1.5s cubic-bezier(0.5, 0, 1, 1) forwards;
+}
 @keyframes custom-stack-out {
   0% {
     transform: translateY(-100px); /* Final position from entry animation */
@@ -192,12 +195,6 @@ body {
     opacity: 0; /* Fully invisible */
   }
 }
-
-/* Class for triggering the exit animation */
-.exit-animation {
-  animation: custom-stack-out 1.5s cubic-bezier(0.5, 0, 1, 1) forwards;
-}
-
 
   /* Footer */
   .footer {
